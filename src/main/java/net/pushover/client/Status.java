@@ -9,6 +9,8 @@ public class Status {
 
     private String requestId;
 
+    private String[] errors;
+
     public Status(Integer status) {
         this.status = status;
     }
@@ -25,8 +27,29 @@ public class Status {
         this.requestId = requestId;
     }
 
+    public String[] getErrors() {
+        return errors;
+    }
+
+    public void setErrors(String[] errors) {
+        this.errors = errors;
+    }
+
     @Override
     public String toString() {
-        return String.format("status: %s, requestId: %s", status != null ? String.valueOf(status) : "??", requestId);
+        StringBuilder builder = new StringBuilder();
+        builder.append("status: ").append(status != null ? String.valueOf(status) : "??");
+        builder.append(", requestId: ").append(requestId);
+        if (errors != null) {
+            builder.append(", errors: [");
+            String delim = "";
+            for (String error : errors) {
+                builder.append(delim);
+                builder.append("\"").append(error).append("\"");
+                delim = ", ";
+            }
+            builder.append("]");
+        }
+        return builder.toString();
     }
 }

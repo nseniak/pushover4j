@@ -1,11 +1,5 @@
 package net.pushover.client;
 
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicReference;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -15,6 +9,12 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Implementation of {@link PushoverClient}
@@ -57,6 +57,9 @@ public class PushoverRestClient implements PushoverClient {
         if (!MessagePriority.NORMAL.equals(msg.getPriority())) {
             addPairIfNotNull(nvps, "priority", msg.getPriority());
         }
+
+        addPairIfNotNull(nvps, "retry", msg.getRetry());
+        addPairIfNotNull(nvps, "expire", msg.getExpire());
 
         post.setEntity(new UrlEncodedFormEntity(nvps, Charset.defaultCharset()));
 

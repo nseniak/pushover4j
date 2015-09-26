@@ -1,16 +1,15 @@
 package net.pushover.client;
 
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * encapsulate service response parsing / building
@@ -38,11 +37,13 @@ public class PushoverResponseFactory {
         }
 
         final Status toReturn = new Status(m.status);
+        toReturn.setErrors(m.errors);
         final Header responseId = response.getFirstHeader(REQUEST_ID_HEADER);
 
         if (responseId != null) {
             toReturn.setRequestId(responseId.getValue());
         }
+
 
         return toReturn;
     }
@@ -74,6 +75,7 @@ public class PushoverResponseFactory {
     // {"status":1}
     private static class ResponseModel {
         int status;
+        String[] errors;
     }
 
     // {"sounds":{"id":"name",...},"status":1}
