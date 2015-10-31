@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * Implementation of {@link PushoverClient}
  * 
- * @author Sean Scanlon <sean.scanlon@gmail.com>
+ * @author Sean Scanlon sean.scanlon@gmail.com
  * 
  * @since Dec 18, 2012
  */
