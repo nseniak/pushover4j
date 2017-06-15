@@ -8,7 +8,7 @@
     <groupId>com.github.sps.pushover.net</groupId>
 	<artifactId>pushover-client</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.4</version>
 	<name>pushover client</name>
     <description>pushover client for java</description>
     <url>http://github.com/sps/pushover4j</url>
@@ -35,7 +35,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.6.1</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -44,7 +44,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -57,7 +57,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.1</version>
+                <version>2.10.4</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
