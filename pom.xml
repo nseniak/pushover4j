@@ -6,8 +6,8 @@
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-	<groupId>com.github.sps.pushover.net</groupId>
-	<artifactId>pushover-client</artifactId>
+	<groupId>com.github.nseniak</groupId>
+	<artifactId>pushover4j</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.5</version>
 	<name>pushover client</name>
