@@ -9,7 +9,7 @@
 	<groupId>com.github.nseniak</groupId>
 	<artifactId>pushover4j</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<name>pushover client</name>
 	<description>pushover client for java</description>
 	<url>http://github.com/sps/pushover4j</url>
