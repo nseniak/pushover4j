@@ -8,7 +8,6 @@
 	<version>1.0.6</version>
 	<name>pushover client</name>
 	<description>pushover client for java</description>
-	<url>http://github.com/sps/pushover4j</url>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -16,11 +15,6 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	<scm>
-		<url>git@github.com:sps/pushover4j.git</url>
-		<connection>scm:git:git@github.com:sps/pushover4j.git</connection>
-		<developerConnection>scm:git:git@github.com:sps/pushover4j.git</developerConnection>
-	</scm>
 	<developers>
 		<developer>
 			<id>sps</id>
