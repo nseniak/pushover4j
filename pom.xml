@@ -5,7 +5,7 @@
 	<groupId>com.github.nseniak</groupId>
 	<artifactId>pushover4j</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
 	<name>pushover client</name>
 	<description>pushover client for java</description>
 	<licenses>
